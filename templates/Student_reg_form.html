@@ -1,0 +1,22 @@
+{% load crispy_forms_filters %}
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+
+<div>
+
+   <form method="POST" >{% csrf_token %}
+       {{ form.as_p }}
+       {{ form2.as_p }}
+        <input type="submit">
+   </form>
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
